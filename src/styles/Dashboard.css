@@ -1,0 +1,91 @@
+/* General Dashboard Styling */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh; /* Ensures background covers entire page */
+    background: linear-gradient(135deg, #3B1F6F, #7E58D9);
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: rgba(34, 17, 72, 0.9);
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Keeps sidebar fixed while scrolling */
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Dashboard Content */
+.dashboard-content {
+    flex: 1;
+    padding: 30px;
+    margin-left: 270px; /* Creates space for the fixed sidebar */
+    overflow-y: auto; /* Enables scrolling inside content */
+    min-height: 100vh; /* Ensures background covers entire screen */
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-card h2 {
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    .dashboard-content {
+        margin-left: 210px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .dashboard-content {
+        margin-left: 0;
+    }
+}

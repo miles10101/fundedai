@@ -1,0 +1,95 @@
+/* Popup Overlay */
+.planA-popup .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7); /* Darker backdrop */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensures popup stays on top */
+}
+
+
+/* Popup Content */
+.planA-popup .popup-content {
+    background: linear-gradient(135deg, #3B1F6F, #7E58D9);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Heading */
+.planA-popup .popup-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Payment Buttons */
+.planA-popup .payment-options button {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.planA-popup .payment-options button:first-child {
+    background: #007bff;
+    color: white;
+}
+
+.planA-popup .payment-options button:first-child:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.planA-popup .payment-options button:last-child {
+    background: #28a745;
+    color: white;
+}
+
+.planA-popup .payment-options button:last-child:hover {
+    background: #1e7e34;
+    transform: scale(1.05);
+}
+
+/* Close Button */
+.planA-popup .close-btn {
+    background: #dc3545;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.planA-popup .close-btn:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
